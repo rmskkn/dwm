@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head data-suburl="/git">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Immanuel/dwm: My build of dwm - dwm-gridmode-20170909-ceac8c9.diff at 838cf55f6c9947ee79f99a0f7038c7e6b0f58831 -  dwm - My awesome git server</title>
+	<link rel="manifest" href="/git/manifest.json" crossorigin="use-credentials">
+	
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('\/git/serviceworker.js').then(function(registration) {
+				
+				console.info('ServiceWorker registration successful with scope: ', registration.scope);
+			}, function(err) {
+				
+				console.info('ServiceWorker registration failed: ', err);
+			});
+		}
+	</script>
+	
+	<meta name="theme-color" content="#6cc644">
+	<meta name="author" content="Immanuel" />
+	<meta name="description" content="dwm - My build of dwm" />
+	<meta name="keywords" content="go,git,self-hosted,gitea">
+	<meta name="referrer" content="no-referrer" />
+	<meta name="_csrf" content="3vbGx_CbJgrYg_wIFPO48wwipRQ6MTY5MTY3OTk0NzQ3NjYyMTY0MQ" />
+	
+	
+	
+
+	<script>
+	/*
+	@licstart  The following is the entire license notice for the
+        JavaScript code in this page.
+
+	Copyright (c) 2016 The Gitea Authors
+	Copyright (c) 2015 The Gogs Authors
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+	---
+	Licensing information for additional javascript libraries can be found at:
+	  {{StaticUrlPrefix}}/vendor/librejs.html
+
+	@licend  The above is the entire license notice
+        for the JavaScript code in this page.
+	*/
+	</script>
+	<script>
+		window.config = {
+			AppSubUrl: '\/git',
+			StaticUrlPrefix: '\/git',
+			csrf: '3vbGx_CbJgrYg_wIFPO48wwipRQ6MTY5MTY3OTk0NzQ3NjYyMTY0MQ',
+			Datetimepicker: false,
+			HighlightJS: true,
+			Minicolors: false,
+			SimpleMDE: false,
+			Tribute: false,
+			U2F: false,
+			Heatmap: false,
+			heatmapUser: null,
+		};
+	</script>
+	<link rel="shortcut icon" href="/git/img/favicon.png">
+	<link rel="mask-icon" href="/git/img/gitea-safari.svg" color="#609926">
+	<link rel="fluid-icon" href="/git/img/gitea-lg.png" title="My awesome git server">
+	<link rel="stylesheet" href="/git/vendor/assets/font-awesome/css/font-awesome.min.css">
+	<link rel="preload" as="font" href="/git/fomantic/themes/default/assets/fonts/icons.woff2" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" as="font" href="/git/fomantic/themes/default/assets/fonts/outline-icons.woff2" type="font/woff2" crossorigin="anonymous">
+
+
+
+	<link rel="stylesheet" href="/git/fomantic/semantic.min.css?v=81d164543ff9b7e1675ede01d422e51e">
+	<link rel="stylesheet" href="/git/css/index.css?v=81d164543ff9b7e1675ede01d422e51e">
+	<noscript>
+		<style>
+			.dropdown:hover > .menu { display: block; }
+			.ui.secondary.menu .dropdown.item > .menu { margin-top: 0; }
+		</style>
+	</noscript>
+
+
+	<style class="list-search-style"></style>
+
+	
+		<meta property="og:title" content="dwm" />
+		<meta property="og:url" content="http://onyeka.ca/git/Immanuel/dwm" />
+		
+			<meta property="og:description" content="My build of dwm" />
+		
+	
+	<meta property="og:type" content="object" />
+	<meta property="og:image" content="http://onyeka.ca/git/user/avatar/Immanuel/-1" />
+
+<meta property="og:site_name" content="My awesome git server" />
+
+
+</head>
+<body>
+	
+
+	<div class="full height">
+		<noscript>This website works better with JavaScript.</noscript>
+
+		
+
+		
+			<div class="ui top secondary stackable main menu following bar light">
+				<div class="ui container" id="navbar">
+	<div class="item brand" style="justify-content: space-between;">
+		<a href="/git/">
+			<img class="ui mini image" src="/git/img/gitea-sm.png">
+		</a>
+		<div class="ui basic icon button mobile-only" id="navbar-expand-toggle">
+			<i class="sidebar icon"></i>
+		</div>
+	</div>
+
+	
+		<a class="item " href="/git/">Home</a>
+		<a class="item " href="/git/explore/repos">Explore</a>
+	
+
+	
+
+	
+
+	
+
+		<a class="item" target="_blank" rel="noopener noreferrer" href="https://docs.gitea.io">Help</a>
+		<div class="right stackable menu">
+			
+			<a class="item" rel="nofollow" href="/git/user/login?redirect_to=%2fgit%2fImmanuel%2fdwm%2fsrc%2fcommit%2f838cf55f6c9947ee79f99a0f7038c7e6b0f58831%2fdwm-gridmode-20170909-ceac8c9.diff">
+				<svg class="svg octicon-sign-in" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-sign-in" /></svg> Sign In
+			</a>
+		</div>
+
+	
+</div>
+
+			</div>
+		
+
+
+<div class="repository file list">
+	<div class="header-wrapper">
+
+	<div class="ui container">
+		<div class="repo-header">
+			<div class="ui huge breadcrumb repo-title">
+				
+					
+						<svg class="svg octicon-repo" width="32" height="32" aria-hidden="true"><use xlink:href="#octicon-repo" /></svg>
+					
+				
+				<a href="/git/Immanuel">Immanuel</a>
+				<div class="divider"> / </div>
+				<a href="/git/Immanuel/dwm">dwm</a>
+				
+				
+				
+				
+				
+			</div>
+			
+				<div class="repo-buttons">
+					<form method="post" action="/git/Immanuel/dwm/action/watch?redirect_to=%2fgit%2fImmanuel%2fdwm%2fsrc%2fcommit%2f838cf55f6c9947ee79f99a0f7038c7e6b0f58831%2fdwm-gridmode-20170909-ceac8c9.diff">
+						<input type="hidden" name="_csrf" value="3vbGx_CbJgrYg_wIFPO48wwipRQ6MTY5MTY3OTk0NzQ3NjYyMTY0MQ">
+						<div class="ui labeled button" tabindex="0">
+							<button type="submit" class="ui compact basic button">
+								<i class="icon fa-eye-slash"></i>Watch
+							</button>
+							<a class="ui basic label" href="/git/Immanuel/dwm/watchers">
+								1
+							</a>
+						</div>
+					</form>
+					<form method="post" action="/git/Immanuel/dwm/action/star?redirect_to=%2fgit%2fImmanuel%2fdwm%2fsrc%2fcommit%2f838cf55f6c9947ee79f99a0f7038c7e6b0f58831%2fdwm-gridmode-20170909-ceac8c9.diff">
+						<input type="hidden" name="_csrf" value="3vbGx_CbJgrYg_wIFPO48wwipRQ6MTY5MTY3OTk0NzQ3NjYyMTY0MQ">
+						<div class="ui labeled button" tabindex="0">
+							<button type="submit" class="ui compact basic button">
+								<i class="icon star outline"></i>Star
+							</button>
+							<a class="ui basic label" href="/git/Immanuel/dwm/stars">
+								0
+							</a>
+						</div>
+					</form>
+					
+						<div class="ui labeled button " tabindex="0">
+							<a class="ui compact basic button poping up"  data-content="Sign in to fork this repository." rel="nofollow" href="/git/user/login?redirect_to=%2fgit/repo/fork/7"  data-position="top center" data-variation="tiny">
+								<svg class="svg octicon-repo-forked" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-repo-forked" /></svg>Fork
+							</a>
+							<a class="ui basic label" href="/git/Immanuel/dwm/forks">
+								0
+							</a>
+						</div>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="ui tabs container">
+		
+			<div class="ui tabular stackable menu navbar">
+				
+				<a class="active item" href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831">
+					<svg class="svg octicon-code" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-code" /></svg> Code
+				</a>
+				
+
+				
+					<a class=" item" href="/git/Immanuel/dwm/issues">
+						<svg class="svg octicon-issue-opened" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-issue-opened" /></svg> Issues <span class="ui gray small label">0</span>
+					</a>
+				
+
+				
+
+				
+					<a class=" item" href="/git/Immanuel/dwm/pulls">
+						<svg class="svg octicon-git-pull-request" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-git-pull-request" /></svg> Pull Requests <span class="ui gray small label">0</span>
+					</a>
+				
+
+				
+				<a class=" item" href="/git/Immanuel/dwm/releases">
+					<svg class="svg octicon-tag" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-tag" /></svg> Releases <span class="ui gray small label">0</span>
+				</a>
+				
+
+				
+					<a class=" item" href="/git/Immanuel/dwm/wiki" >
+						<svg class="svg octicon-book" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-book" /></svg> Wiki
+					</a>
+				
+
+				
+					<a class=" item" href="/git/Immanuel/dwm/activity">
+						<svg class="svg octicon-pulse" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-pulse" /></svg> Activity
+					</a>
+				
+
+				
+
+				
+			</div>
+		
+	</div>
+	<div class="ui tabs divider"></div>
+</div>
+
+	<div class="ui container">
+		
+
+
+
+		<div class="ui repo-description">
+			<div id="repo-desc">
+				<span class="description has-emoji">My build of dwm</span>
+				<a class="link" href=""></a>
+			</div>
+			
+		</div>
+		<div class="ui" id="repo-topics">
+		
+		
+		</div>
+		
+		<div class="hide" id="validate_prompt">
+			<span id="count_prompt">You can not select more than 25 topics</span>
+			<span id="format_prompt">Topics must start with a letter or number, can include dashes (&#39;-&#39;) and can be up to 35 characters long.</span>
+		</div>
+		
+		<div class="ui segments repository-summary">
+	<div class="ui segment sub-menu repository-menu">
+		<div class="ui two horizontal center link list">
+			
+				<div class="item">
+					<a class="ui" href="/git/Immanuel/dwm/commits/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831"><svg class="svg octicon-history" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-history" /></svg> <b>6</b> Commits</a>
+				</div>
+			
+			
+				<div class="item">
+					<a class="ui" href="/git/Immanuel/dwm/branches/"><svg class="svg octicon-git-branch" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-git-branch" /></svg> <b>1</b> Branch</a>
+				</div>
+				<div class="item">
+					<a class="ui" href="#"><svg class="svg octicon-database" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-database" /></svg> <b>176 KiB</b></a>
+				</div>
+			
+		</div>
+	</div>
+	
+	<div class="ui segment sub-menu language-stats-details" style="display: none">
+		<div class="ui horizontal center link list">
+			
+			<div class="item">
+				<i class="color-icon" style="background-color: #555555"></i>
+				<span class="ui"><b>
+				
+					C
+				
+				</b> 51.5%</span>
+			</div>
+			
+			<div class="item">
+				<i class="color-icon" style="background-color: #cccccc"></i>
+				<span class="ui"><b>
+				
+					Diff
+				
+				</b> 42.8%</span>
+			</div>
+			
+			<div class="item">
+				<i class="color-icon" style="background-color: #427819"></i>
+				<span class="ui"><b>
+				
+					Makefile
+				
+				</b> 2.9%</span>
+			</div>
+			
+			<div class="item">
+				<i class="color-icon" style="background-color: #cccccc"></i>
+				<span class="ui"><b>
+				
+					Roff Manpage
+				
+				</b> 2.7%</span>
+			</div>
+			
+			<div class="item">
+				<i class="color-icon" style="background-color: #cccccc"></i>
+				<span class="ui"><b>
+				
+					Other
+				
+				</b> 0.1%</span>
+			</div>
+			
+		</div>
+	</div>
+	<a class="ui segment language-stats">
+		
+		<div class="bar" style="width: 51.5%; background-color: #555555">&nbsp;</div>
+		
+		<div class="bar" style="width: 42.8%; background-color: #cccccc">&nbsp;</div>
+		
+		<div class="bar" style="width: 2.9%; background-color: #427819">&nbsp;</div>
+		
+		<div class="bar" style="width: 2.7%; background-color: #cccccc">&nbsp;</div>
+		
+		<div class="bar" style="width: 0.1%; background-color: #cccccc">&nbsp;</div>
+		
+	</a>
+	
+</div>
+
+		<div class="ui stackable secondary menu mobile--margin-between-items mobile--no-negative-margins">
+			<div class="fitted item choose reference">
+	<div class="ui floating filter dropdown custom" data-can-create-branch="false" data-no-results="No results found.">
+		<div class="ui basic small compact button" @click="menuVisible = !menuVisible" @keyup.enter="menuVisible = !menuVisible">
+			<span class="text">
+				<svg class="svg octicon-git-branch" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-git-branch" /></svg>
+				Tree:
+				<strong>838cf55f6c</strong>
+			</span>
+			<i class="dropdown icon"></i>
+		</div>
+		<div class="data" style="display: none" data-mode="branches">
+			
+				<div class="item branch " data-url="/git/Immanuel/dwm/src/branch/master/dwm-gridmode-20170909-ceac8c9.diff">master</div>
+			
+			
+		</div>
+		<div class="menu transition" :class="{visible: menuVisible}" v-if="menuVisible" v-cloak>
+			<div class="ui icon search input">
+				<i class="filter icon"></i>
+				<input name="search" ref="searchField" v-model="searchTerm" @keydown="keydown($event)" placeholder="Filter branch or tag...">
+			</div>
+			<div class="header branch-tag-choice">
+				<div class="ui grid">
+					<div class="two column row">
+						<a class="reference column" href="#" @click="mode = 'branches'; focusSearchField()">
+							<span class="text" :class="{black: mode == 'branches'}">
+								<svg class="svg octicon-git-branch" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-git-branch" /></svg> Branches
+							</span>
+						</a>
+						<a class="reference column" href="#" @click="mode = 'tags'; focusSearchField()">
+							<span class="text" :class="{black: mode == 'tags'}">
+								<i class="reference tags icon"></i> Tags
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="scrolling menu" ref="scrollContainer">
+				<div v-for="(item, index) in filteredItems" :key="item.name" class="item" :class="{selected: item.selected, active: active == index}" @click="selectItem(item)" :ref="'listItem' + index">${ item.name }</div>
+				<div class="item" v-if="showCreateNewBranch" :class="{active: active == filteredItems.length}" :ref="'listItem' + filteredItems.length">
+					<a href="#" @click="createNewBranch()">
+						<div>
+							<svg class="svg octicon-git-branch" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-git-branch" /></svg>
+							Create branch <strong>${ searchTerm }</strong>
+						</div>
+						<div class="text small">
+							
+								from &#39;838cf55f6c&#39;
+							
+						</div>
+					</a>
+					<form ref="newBranchForm" action="/git/Immanuel/dwm/branches/_new/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831" method="post">
+						<input type="hidden" name="_csrf" value="3vbGx_CbJgrYg_wIFPO48wwipRQ6MTY5MTY3OTk0NzQ3NjYyMTY0MQ">
+						<input type="hidden" name="new_branch_name" v-model="searchTerm">
+					</form>
+				</div>
+			</div>
+			<div class="message" v-if="showNoResults">${ noResults }</div>
+		</div>
+	</div>
+</div>
+
+			
+			
+			
+			
+				<div class="fitted item"><span class="ui breadcrumb repo-path"><a class="section" href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831" title="dwm">dwm</a><span class="divider">/</span><span class="active section" title="dwm-gridmode-20170909-ceac8c9.diff">dwm-gridmode-20170909-ceac8...</span></span></div>
+			
+			<div class="right fitted item" id="file-buttons">
+				<div class="ui tiny blue buttons">
+					
+						
+						
+					
+					
+				</div>
+
+			</div>
+			<div class="fitted item">
+				
+			</div>
+			<div class="fitted item">
+
+				
+				
+			</div>
+		</div>
+		
+			<div class="tab-size-8 non-diff-file-content">
+	<h4 class="file-header ui top attached header">
+		<div class="file-header-left">
+			
+				<div class="file-info text grey normal mono">
+					
+					
+						<div class="file-info-entry">
+							74 lines
+						</div>
+					
+					
+						<div class="file-info-entry">
+							2.5 KiB
+						</div>
+					
+					
+				</div>
+			
+		</div>
+		
+		<div class="file-header-right">
+			<div class="ui right file-actions">
+				<div class="ui buttons">
+					<a class="ui button" href="/git/Immanuel/dwm/raw/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff">Raw</a>
+					
+					
+						<a class="ui button" href="/git/Immanuel/dwm/blame/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff">Blame</a>
+					
+					<a class="ui button" href="/git/Immanuel/dwm/commits/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff">History</a>
+				</div>
+				
+					
+						<span class="btn-octicon poping up disabled" data-content="You must be on a branch to make or propose changes to this file." data-position="bottom center" data-variation="tiny inverted"><svg class="svg octicon-pencil" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-pencil" /></svg></span>
+					
+					
+						<span class="btn-octicon poping up disabled" data-content="You must be on a branch to make or propose changes to this file." data-position="bottom center" data-variation="tiny inverted"><svg class="svg octicon-trashcan" width="16" height="16" aria-hidden="true"><use xlink:href="#octicon-trashcan" /></svg></span>
+					
+				
+			</div>
+		</div>
+		
+	</h4>
+	<div class="ui attached table unstackable segment">
+		<div class="file-view code-view has-emoji">
+			
+				<table>
+					<tbody>
+						<tr>
+						
+							<td class="lines-num"><span id="L1" data-line-number="1"></span><span id="L2" data-line-number="2"></span><span id="L3" data-line-number="3"></span><span id="L4" data-line-number="4"></span><span id="L5" data-line-number="5"></span><span id="L6" data-line-number="6"></span><span id="L7" data-line-number="7"></span><span id="L8" data-line-number="8"></span><span id="L9" data-line-number="9"></span><span id="L10" data-line-number="10"></span><span id="L11" data-line-number="11"></span><span id="L12" data-line-number="12"></span><span id="L13" data-line-number="13"></span><span id="L14" data-line-number="14"></span><span id="L15" data-line-number="15"></span><span id="L16" data-line-number="16"></span><span id="L17" data-line-number="17"></span><span id="L18" data-line-number="18"></span><span id="L19" data-line-number="19"></span><span id="L20" data-line-number="20"></span><span id="L21" data-line-number="21"></span><span id="L22" data-line-number="22"></span><span id="L23" data-line-number="23"></span><span id="L24" data-line-number="24"></span><span id="L25" data-line-number="25"></span><span id="L26" data-line-number="26"></span><span id="L27" data-line-number="27"></span><span id="L28" data-line-number="28"></span><span id="L29" data-line-number="29"></span><span id="L30" data-line-number="30"></span><span id="L31" data-line-number="31"></span><span id="L32" data-line-number="32"></span><span id="L33" data-line-number="33"></span><span id="L34" data-line-number="34"></span><span id="L35" data-line-number="35"></span><span id="L36" data-line-number="36"></span><span id="L37" data-line-number="37"></span><span id="L38" data-line-number="38"></span><span id="L39" data-line-number="39"></span><span id="L40" data-line-number="40"></span><span id="L41" data-line-number="41"></span><span id="L42" data-line-number="42"></span><span id="L43" data-line-number="43"></span><span id="L44" data-line-number="44"></span><span id="L45" data-line-number="45"></span><span id="L46" data-line-number="46"></span><span id="L47" data-line-number="47"></span><span id="L48" data-line-number="48"></span><span id="L49" data-line-number="49"></span><span id="L50" data-line-number="50"></span><span id="L51" data-line-number="51"></span><span id="L52" data-line-number="52"></span><span id="L53" data-line-number="53"></span><span id="L54" data-line-number="54"></span><span id="L55" data-line-number="55"></span><span id="L56" data-line-number="56"></span><span id="L57" data-line-number="57"></span><span id="L58" data-line-number="58"></span><span id="L59" data-line-number="59"></span><span id="L60" data-line-number="60"></span><span id="L61" data-line-number="61"></span><span id="L62" data-line-number="62"></span><span id="L63" data-line-number="63"></span><span id="L64" data-line-number="64"></span><span id="L65" data-line-number="65"></span><span id="L66" data-line-number="66"></span><span id="L67" data-line-number="67"></span><span id="L68" data-line-number="68"></span><span id="L69" data-line-number="69"></span><span id="L70" data-line-number="70"></span><span id="L71" data-line-number="71"></span><span id="L72" data-line-number="72"></span><span id="L73" data-line-number="73"></span></td>
+							<td class="lines-code"><pre><code class="diff"><ol class="linenums"><li class="L1" rel="L1">From b04bb473cf9818277d33a591f7fe2dfae96afaaf Mon Sep 17 00:00:00 2001
+</li><li class="L2" rel="L2">From: Joshua Haase &lt;hahj87@gmail.com&gt;
+</li><li class="L3" rel="L3">Date: Mon, 15 Aug 2016 17:06:18 -0500
+</li><li class="L4" rel="L4">Subject: [PATCH] Apply modified gridmode patch.
+</li><li class="L5" rel="L5">
+</li><li class="L6" rel="L6">---
+</li><li class="L7" rel="L7"> config.def.h |  3 +++
+</li><li class="L8" rel="L8"> layouts.c    | 27 +++++++++++++++++++++++++++
+</li><li class="L9" rel="L9"> 2 files changed, 30 insertions(+)
+</li><li class="L10" rel="L10"> create mode 100644 layouts.c
+</li><li class="L11" rel="L11">
+</li><li class="L12" rel="L12">diff --git a/config.def.h b/config.def.h
+</li><li class="L13" rel="L13">index a9ac303..30b7c4a 100644
+</li><li class="L14" rel="L14">--- a/config.def.h
+</li><li class="L15" rel="L15">+++ b/config.def.h
+</li><li class="L16" rel="L16">@@ -36,11 +36,13 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95]
+</li><li class="L17" rel="L17"> static const int nmaster     = 1;    /* number of clients in master area */
+</li><li class="L18" rel="L18"> static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+</li><li class="L19" rel="L19"> 
+</li><li class="L20" rel="L20">+#include &#34;layouts.c&#34;
+</li><li class="L21" rel="L21"> static const Layout layouts[] = {
+</li><li class="L22" rel="L22"> 	/* symbol     arrange function */
+</li><li class="L23" rel="L23"> 	{ &#34;[]=&#34;,      tile },    /* first entry is default */
+</li><li class="L24" rel="L24"> 	{ &#34;&gt;&lt;&gt;&#34;,      NULL },    /* no layout function means floating behavior */
+</li><li class="L25" rel="L25"> 	{ &#34;[M]&#34;,      monocle },
+</li><li class="L26" rel="L26">+	{ &#34;HHH&#34;,      grid },
+</li><li class="L27" rel="L27"> };
+</li><li class="L28" rel="L28"> 
+</li><li class="L29" rel="L29"> /* key definitions */
+</li><li class="L30" rel="L30">@@ -76,6 +78,7 @@ static Key keys[] = {
+</li><li class="L31" rel="L31"> 	{ MODKEY,                       XK_t,      setlayout,      {.v = &amp;layouts[0]} },
+</li><li class="L32" rel="L32"> 	{ MODKEY,                       XK_f,      setlayout,      {.v = &amp;layouts[1]} },
+</li><li class="L33" rel="L33"> 	{ MODKEY,                       XK_m,      setlayout,      {.v = &amp;layouts[2]} },
+</li><li class="L34" rel="L34">+	{ MODKEY,                       XK_g,      setlayout,      {.v = &amp;layouts[3]} },
+</li><li class="L35" rel="L35"> 	{ MODKEY,                       XK_space,  setlayout,      {0} },
+</li><li class="L36" rel="L36"> 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+</li><li class="L37" rel="L37"> 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+</li><li class="L38" rel="L38">diff --git a/layouts.c b/layouts.c
+</li><li class="L39" rel="L39">new file mode 100644
+</li><li class="L40" rel="L40">index 0000000..d26acf3
+</li><li class="L41" rel="L41">--- /dev/null
+</li><li class="L42" rel="L42">+++ b/layouts.c
+</li><li class="L43" rel="L43">@@ -0,0 +1,27 @@
+</li><li class="L44" rel="L44">+void
+</li><li class="L45" rel="L45">+grid(Monitor *m) {
+</li><li class="L46" rel="L46">+	unsigned int i, n, cx, cy, cw, ch, aw, ah, cols, rows;
+</li><li class="L47" rel="L47">+	Client *c;
+</li><li class="L48" rel="L48">+
+</li><li class="L49" rel="L49">+	for(n = 0, c = nexttiled(m-&gt;clients); c; c = nexttiled(c-&gt;next))
+</li><li class="L50" rel="L50">+		n++;
+</li><li class="L51" rel="L51">+
+</li><li class="L52" rel="L52">+	/* grid dimensions */
+</li><li class="L53" rel="L53">+	for(rows = 0; rows &lt;= n/2; rows++)
+</li><li class="L54" rel="L54">+		if(rows*rows &gt;= n)
+</li><li class="L55" rel="L55">+			break;
+</li><li class="L56" rel="L56">+	cols = (rows &amp;&amp; (rows - 1) * rows &gt;= n) ? rows - 1 : rows;
+</li><li class="L57" rel="L57">+
+</li><li class="L58" rel="L58">+	/* window geoms (cell height/width) */
+</li><li class="L59" rel="L59">+	ch = m-&gt;wh / (rows ? rows : 1);
+</li><li class="L60" rel="L60">+	cw = m-&gt;ww / (cols ? cols : 1);
+</li><li class="L61" rel="L61">+	for(i = 0, c = nexttiled(m-&gt;clients); c; c = nexttiled(c-&gt;next)) {
+</li><li class="L62" rel="L62">+		cx = m-&gt;wx + (i / rows) * cw;
+</li><li class="L63" rel="L63">+		cy = m-&gt;wy + (i % rows) * ch;
+</li><li class="L64" rel="L64">+		/* adjust height/width of last row/column&#39;s windows */
+</li><li class="L65" rel="L65">+		ah = ((i + 1) % rows == 0) ? m-&gt;wh - ch * rows : 0;
+</li><li class="L66" rel="L66">+		aw = (i &gt;= rows * (cols - 1)) ? m-&gt;ww - cw * cols : 0;
+</li><li class="L67" rel="L67">+		resize(c, cx, cy, cw - 2 * c-&gt;bw + aw, ch - 2 * c-&gt;bw + ah, False);
+</li><li class="L68" rel="L68">+		i++;
+</li><li class="L69" rel="L69">+	}
+</li><li class="L70" rel="L70">+}
+</li><li class="L71" rel="L71">-- 
+</li><li class="L72" rel="L72">2.14.1
+</li><li class="L73" rel="L73"></li></ol></code></pre></td>
+						
+						</tr>
+					</tbody>
+				</table>
+			
+		</div>
+	</div>
+</div>
+
+<script>
+function submitDeleteForm() {
+    var message = prompt("delete_confirm_message\n\ndelete_commit_summary", "Delete ''");
+    if (message != null) {
+        $("#delete-message").val(message);
+        $("#delete-file-form").submit()
+    }
+}
+</script>
+
+		
+	</div>
+</div>
+
+
+	
+
+	</div>
+
+	
+
+	<footer>
+	<div class="ui container">
+		<div class="ui left">
+			Powered by Gitea Version: 1.12.0&#43;dev-11-gda1633a5d Page: <strong>7ms</strong> Template: <strong>1ms</strong>
+		</div>
+		<div class="ui right links">
+			
+			<div class="ui language bottom floating slide up dropdown link item">
+				<i class="world icon"></i>
+				<div class="text">English</div>
+				<div class="menu">
+					
+						<a lang="en-US" class="item active selected" href="#">English</a>
+					
+						<a lang="zh-CN" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=zh-CN">简体中文</a>
+					
+						<a lang="zh-HK" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=zh-HK">繁體中文（香港）</a>
+					
+						<a lang="zh-TW" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=zh-TW">繁體中文（台灣）</a>
+					
+						<a lang="de-DE" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=de-DE">Deutsch</a>
+					
+						<a lang="fr-FR" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=fr-FR">français</a>
+					
+						<a lang="nl-NL" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=nl-NL">Nederlands</a>
+					
+						<a lang="lv-LV" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=lv-LV">latviešu</a>
+					
+						<a lang="ru-RU" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=ru-RU">русский</a>
+					
+						<a lang="uk-UA" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=uk-UA">Українська</a>
+					
+						<a lang="ja-JP" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=ja-JP">日本語</a>
+					
+						<a lang="es-ES" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=es-ES">español</a>
+					
+						<a lang="pt-BR" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=pt-BR">português do Brasil</a>
+					
+						<a lang="pl-PL" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=pl-PL">polski</a>
+					
+						<a lang="bg-BG" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=bg-BG">български</a>
+					
+						<a lang="it-IT" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=it-IT">italiano</a>
+					
+						<a lang="fi-FI" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=fi-FI">suomi</a>
+					
+						<a lang="tr-TR" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=tr-TR">Türkçe</a>
+					
+						<a lang="cs-CZ" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=cs-CZ">čeština</a>
+					
+						<a lang="sr-SP" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=sr-SP">српски</a>
+					
+						<a lang="sv-SE" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=sv-SE">svenska</a>
+					
+						<a lang="ko-KR" class="item " href="/git/Immanuel/dwm/src/commit/838cf55f6c9947ee79f99a0f7038c7e6b0f58831/dwm-gridmode-20170909-ceac8c9.diff?lang=ko-KR">한국어</a>
+					
+				</div>
+			</div>
+			<a href="/git/vendor/librejs.html" data-jslicense="1">JavaScript licenses</a>
+			<a href="/git/api/swagger">API</a>
+			<a target="_blank" rel="noopener noreferrer" href="https://gitea.io">Website</a>
+			
+			<span class="version">Go1.13.8</span>
+		</div>
+	</div>
+</footer>
+
+
+	<script src="/git/js/jquery.js?v=81d164543ff9b7e1675ede01d422e51e"></script>
+
+
+
+
+
+
+
+
+	<script src="/git/vendor/plugins/emojify/emojify.custom.js"></script>
+	<script src="/git/fomantic/semantic.min.js?v=81d164543ff9b7e1675ede01d422e51e"></script>
+	<script src="/git/js/index.js?v=81d164543ff9b7e1675ede01d422e51e"></script>
+
+</body>
+</html>
+
