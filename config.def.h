@@ -19,6 +19,7 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+static const double defaultopacity  = 0.025;    /* transparency */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -86,6 +87,10 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+
+	/* Transparency */
+	{ MODKEY|ShiftMask,		 XK_s,	     spawn,	     SHCMD("transset -a --dec .1") },
+	{ MODKEY|ShiftMask,		 XK_d,	     spawn,	     SHCMD("transset -a --inc .1") },
 
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("mkdir -p ~/Pictures/screenshots && scrot ~/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png -u") },
 	{ MODKEY|ControlMask,           XK_s,      spawn,          SHCMD("mkdir -p ~/Pictures/screenshots && scrot ~/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png -s") },
