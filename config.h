@@ -1,8 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gap pixel between windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int gappx     = 3;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
@@ -39,11 +41,12 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	/* class            instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+	{ "Gimp",           NULL,     NULL,           0,         1,          0,           0,        -1 },
+	{ "Firefox",        NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+	{ "St",             NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "pavucontrol",    NULL,     NULL,           0,         1,          0,           1,        -1 },
+    { NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -61,7 +64,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -76,12 +79,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
-static const char *volume_up[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+05%", NULL };
-static const char *volume_down[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-05%", NULL };
-static const char *volume_mute[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
-static const char *mic_mute[] = { "pactl", "set-source-mute", "@DEFAULT_SOURCE@", "toggle", NULL };
-
-
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -89,12 +86,8 @@ static const Key keys[] = {
 
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("mkdir -p ~/Pictures/screenshots && scrot ~/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png -u") },
 	{ MODKEY|ControlMask,           XK_s,      spawn,          SHCMD("mkdir -p ~/Pictures/screenshots && scrot ~/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png -s") },
-	{ MODKEY,                       XK_n,      spawn,          {.v = volume_up } },
-	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = volume_down } },
-	{ MODKEY|ControlMask,           XK_n,      spawn,          {.v = volume_mute } },
-	{ MODKEY,                       XK_z,      spawn,          {.v = mic_mute } },
 
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_n,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_e,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_l,      incnmaster,     {.i = +1 } },
@@ -127,6 +120,17 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
+    { MODKEY,                       XK_b,      spawn,          SHCMD("firefox") },
+
+    // Volume
+    {0,                             XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%")},
+    {0,                             XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%")},
+    {0,                             XF86XK_AudioMute,        spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle")},
+
+    // Brightness
+    {0,                             XF86XK_MonBrightnessUp,  spawn, SHCMD("brightnessctl set +10%")},
+    {0,                             XF86XK_MonBrightnessDown,spawn, SHCMD("brightnessctl set 10%-")},
 };
 
 /* button definitions */
