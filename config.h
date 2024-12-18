@@ -44,9 +44,9 @@ static const Rule rules[] = {
 	/* class            instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",           NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox",        NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "St",             NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ "pavucontrol",    NULL,     NULL,           0,         1,          0,           1,        -1 },
-    { NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	{ "Pavucontrol",    NULL,     NULL,           0,         1,          0,           1,        -1 },
+	{ "PrusaSlicer",    NULL,     NULL,           0,         0,          0,           1         -1 },
+	{ NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
