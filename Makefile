@@ -7,6 +7,11 @@ BUILD_DIR := build
 SRCS := $(shell find . -name '*.c')
 OBJS := $(subst ./, $(BUILD_DIR)/, $(SRCS:.c=.o))
 
+all: overrides options $(BUILD_DIR)/dwm
+
+overrides:
+	sed -i -e "s/@USER@/$(shell whoami)/g" config.h
+
 all: options $(BUILD_DIR)/dwm
 
 CFLAGS := ${CFLAGS} -MMD

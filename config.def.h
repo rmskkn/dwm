@@ -31,9 +31,9 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"st", NULL,
-    	"hsetroot", "-center", "/home/roman/projects/dotfiles/wallpapers/MountainNordic.png", NULL,
-	NULL /* terminate */
+    "st", NULL,
+    "hsetroot", "-center", "/home/@USER@/.dotfiles/wallpapers/MountainNordic.png", NULL,
+    NULL /* terminate */
 };
 
 /* tagging */
