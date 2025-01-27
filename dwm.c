@@ -953,6 +953,7 @@ drawbars(void)
 void
 enternotify(XEvent *e)
 {
+#if 0
 	Client *c;
 	Monitor *m;
 	XCrossingEvent *ev = &e->xcrossing;
@@ -967,6 +968,7 @@ enternotify(XEvent *e)
 	} else if (!c || c == selmon->sel)
 		return;
 	focus(c);
+#endif
 }
 
 void
