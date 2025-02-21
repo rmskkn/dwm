@@ -133,8 +133,8 @@ static const Key keys[] = {
     {0,                             XF86XK_AudioMute,        spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle")},
 
     // Brightness
-    {0,                             XF86XK_MonBrightnessUp,  spawn, SHCMD("xbacklight -inc 10%")},
-    {0,                             XF86XK_MonBrightnessDown,spawn, SHCMD("xbacklight -dec 10%")},
+    {0,                             XF86XK_MonBrightnessUp,  spawn, SHCMD("xbacklight -inc 10")},
+    {0,                             XF86XK_MonBrightnessDown,spawn, SHCMD("xbacklight -dec 10")},
 };
 
 /* button definitions */
