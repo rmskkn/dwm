@@ -126,6 +126,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
     { MODKEY,                       XK_b,      spawn,          SHCMD("firefox") },
+    { ControlMask|ShiftMask,        XK_l,      spawn,          SHCMD("xscreensaver-command -lock") },
 
     // Volume
     {0,                             XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%")},
