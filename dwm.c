@@ -1523,7 +1523,6 @@ propertynotify(XEvent *e)
 void
 saveSession(void)
 {
-	return;
 	FILE *fw = fopen(SESSION_FILE, "w");
 	for (Client *c = selmon->clients; c != NULL; c = c->next) { // get all the clients with their tags and write them to the file
 		fprintf(fw, "%lu %u\n", c->win, c->tags);
