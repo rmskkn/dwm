@@ -52,8 +52,9 @@ install:
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	mkdir -p ${DESTDIR}/usr/share/xsessions
-	sed -i -e "s/@USER@/$(shell /bin/bash -c 'echo "${SUDO_USER}"')/g" dwm.desktop
-	cp -f dwm.desktop ${DESTDIR}/usr/share/xsessions
+	mkdir -p ${BUILD_DIR}
+	sed -e "s/@USER@/$(shell /bin/bash -c 'echo "${SUDO_USER}"')/g" < dwm.desktop.in > ${BUILD_DIR}/dwm.desktop
+	cp -f ${BUILD_DIR}/dwm.desktop ${DESTDIR}/usr/share/xsessions
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm
