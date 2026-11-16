@@ -30,6 +30,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
     "hsetroot", "-center", "/home/roman/.dotfiles/wallpapers/MountainNordic.png", NULL,
+    "slstatus", NULL,
     NULL /* terminate */
 };
 
